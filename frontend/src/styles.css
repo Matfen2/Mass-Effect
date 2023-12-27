@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  display: block;
+}
+
+#home .show .navbar {
+  top: 1%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#home .show .navbar .navbar-brand .img-fluid {
+  height: 80px;
+  max-width: 250px;
+  margin-left: 10px;
+}
+#home .show .navbar #btnConnect {
+  color: azure;
+  border: transparent;
+  background: transparent;
+}/*# sourceMappingURL=styles.css.map */

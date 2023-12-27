@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: auto;
+    display: block;
+}
+
+// ROOT & MIXIN 
+$firstColor : azure;
+
+@mixin flex ($flexDirection) {
+    display: flex;
+    flex-direction: $flexDirection;
+}
+
+#home {
+    .show {
+        .navbar {
+            top: 1%;
+            position: absolute;
+            @include flex (row);
+            justify-content: space-between;
+            .navbar-brand {
+                .img-fluid {
+                    height: 80px;
+                    max-width: 250px;
+                    margin-left: 10px;
+                }
+            }
+            #btnConnect {
+                color: $firstColor;
+                border: transparent;
+                background: transparent;
+            }
+        }
+    }
+}
