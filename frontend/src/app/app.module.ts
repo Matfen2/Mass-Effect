@@ -9,7 +9,6 @@ import { MainModule } from './main/main.module';
 @NgModule({
   declarations: [
     AppComponent,
-    CardDirective
   ],
   imports: [
     MainModule,

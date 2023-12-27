@@ -3,9 +3,36 @@
         <img src="/assets/pict/massEffectMain.jpg" class="img-fluid w-100" alt="pictMain" />
         <div class="navbar navbar-expand-lg">
             <div class="navbar-brand">
-                <a routerLink="/home"><img src="/assets/pict/massEffectN7Logo.png" class="img-fluid w-100" alt="n7Logo" /></a>
+                <a [routerLink]="'/home'"><img src="/assets/pict/massEffectN7Logo.png" class="img-fluid w-100" alt="n7Logo" /></a>
             </div>
             <button type="button" id="btnConnect" data-bs-toggle="modal" data-bs-target="#connect"><i class="fa fa-sign-in" aria-hidden="true"></i></button>
         </div>
+        <div class="listSupport">
+            <div class="row">
+                <div class="col-lg-4">
+                    <button type="button" id="btnPlaystation" appCard><a href="https://www.playstation.com/fr-be/games/mass-effect-legendary-edition/"><i class="fa-brands fa-playstation"></i></a></button>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" id="btnXbox" appCard><a href="https://www.xbox.com/fr-FR/games/store/mass-effect-edition-legendaire/9PKWHT7G60WQ"><i class="fa-brands fa-xbox"></i></a></button>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" id="btnSteam" appCard><a href="https://store.steampowered.com/app/1328670/Mass_Effect_Legendary_Edition/"><i class="fa-brands fa-steam"></i></a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <img src="/assets/pict/massEffectNormandy.jpg" class="img-fluid w-100" alt="massEffectCitadel" />
+        <div class="info">
+            <h2 class="present">A PROPOS DE MASS EFFECT</h2>
+            <div class="sentence">
+                <p class="what">Explorez les planètes, créer des liens avec d’autres personnages, faites vos choix et trouver un moyen de vaincre les Moisseneurs.</p>
+                <p class="what">Par les créateurs de Baldur’s Gate, voici une saga d'Action-RPG science-fiction la plus apprécié de tous.</p>
+                <button type="button" id="btnMoreInfo" [routerLink]="'/about'">EN SAVOIR PLUS</button>
+            </div>
+        </div>
+    </div>
+    <div class="characters">
+        <img src="/assets/pict/massEffectCharacters.jpeg" class="img-fluid w-100" alt="characters" />
     </div>
 </section>
