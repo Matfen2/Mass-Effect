@@ -15,8 +15,13 @@ export class AuthService {
     return this._http.post(`${this.apiUrl}/login`, { adress, pass });
   }
 
-  // LOGIN
+  // REGISTER
   registerMember(user: any): Observable<any> {
     return this._http.post(`${this.apiUrl}/register`, user);
+  }
+
+  // CONTACT
+  sendMessage(data: any): Observable<any> {
+    return this._http.post(`${this.apiUrl}/contact`, data);
   }
 }

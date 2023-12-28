@@ -1,0 +1,20 @@
+<section id="login">
+    <button type="button" id="btnCloseConnect" [routerLink]="'/home'"><i class="fas fa-times"></i></button>
+    <div class="containLogIn">
+        <div class="alert alert-success" role="alert" *ngIf="successmsg">
+            <p>Bravo, vous etes connecté !</p>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="errormsg">
+            <p>Erreur, nom d'utilisateur et/ou mot de passe incorrect</p>
+        </div>
+        <form (ngSubmit)="login()">
+            <p class="identify">Identifiez-vous :</p>
+                <label></label>
+                <input type="text" name="adress" id="adress" class="form-control" placeholder="Adresse" [(ngModel)]="user.adress" required />
+                <label></label>
+                <input type="password" name="pass" id="pass" class="form-control" placeholder="Mot de passe" [(ngModel)]="user.pass" required />
+            <p class="already">Vous n'etes pas inscris ? <a [routerLink]="'/register'" class="hrefSignUp">Inscrivez-vous</a></p>
+            <button type="submit" id="btnIdentify">SE CONNECTER</button>
+        </form>
+    </div>
+</section>
