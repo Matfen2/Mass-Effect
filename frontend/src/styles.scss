@@ -12,6 +12,7 @@ $firstColor : azure;
 $secondColor: darkblue;
 $thirdColor: darkgreen;
 $fourColor: darkgrey;
+$fiveColor: black;
 $firstFont: me123;
 $secondFont: venusRising;
 
@@ -31,6 +32,7 @@ $secondFont: venusRising;
     src: url('/assets/fonts/venusRising.otf');
 }
 
+// HOME
 #home {
     .show {
         .img-fluid {
@@ -118,7 +120,7 @@ $secondFont: venusRising;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url('/assets/pict/massEffectAbout.png');
+        background-image: url('/assets/pict/massEffectAbout3.png');
         .info {
             top: 125%;
             left: 73%;
@@ -146,17 +148,66 @@ $secondFont: venusRising;
                     text-shadow: 2px 2px 6px #000000, 2px 1px 0px rgba(0,0,0,0.15);
 
                 }
-                #btnMoreInfo {
-                    padding: 5px;
-                    opacity: 0.4;
-                    cursor: pointer;
-                    color: $firstColor;
-                    border-radius: 5px;
-                    font-family: $firstFont;
-                    border: 1px solid $secondColor;
-                    background-color: rgb(0, 0, 0);
-                    &:hover {
-                        opacity: 1.0;
+            }
+        }
+    }
+    .characters {
+        height: 590px;
+        margin-bottom: -90px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/assets/pict/massEffectCharacters.jpg');
+        .listCharacters {
+            text-align: center;
+            max-width: 1360px;
+            padding-top: 40px; 
+            margin: auto;
+            margin-bottom: 20px;
+            @include flex (row);
+            #btnCharacter {
+                font-size: 1.1em;
+                letter-spacing: 2px;
+                color: $firstColor;
+                border: transparent;
+                cursor: pointer;
+                font-family: $secondFont;
+                background: transparent;
+                text-shadow: 2px 2px 6px $fiveColor, 2px 2px 0px rgba(0,0,0,0.15);
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+        .containCharacter {
+            .detailCharacter {
+                margin: 10px auto;
+                max-width: 1900px;
+                .row {
+                    .col-lg-5 {
+                        .img-fluid {
+                            left: 10%;
+                            height: 360px;
+                            max-width: 700px;
+                            position: relative;
+                            border-radius: 5px;
+                        }
+                    }
+                    .col-lg-7 {
+                        left: 15%;
+                        max-width: 720px;
+                        position: relative;
+                        .describe {
+                            text-align: center;
+                            height: 260px;
+                            overflow: auto;
+                            margin: 37px auto;
+                            font-size: 1.3em;
+                            color: $firstColor;
+                            letter-spacing: 2px;
+                            font-family: $firstFont;
+                            text-shadow: 2px 2px 6px $fiveColor, 2px 4px 0px rgba(0,0,0,0.15);
+                        }
                     }
                 }
             }
@@ -164,7 +215,7 @@ $secondFont: venusRising;
     }
     .contact {
         height: auto;
-        margin-bottom: -20px;
+        margin-bottom: -50px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -232,17 +283,20 @@ $secondFont: venusRising;
                         font-size: 1.2em;
                         padding: 10px 20px;
                         border-radius: 5px;
+                        opacity: 0.8;
                         background-color: $secondColor;
                         transition: all 0.25ms ease;
                         &:active {
-                            background-color: $thirdColor;
+                            opacity: 1.0;
                         }
                     }
                 }
             }
         }
         .footer {
-            padding: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: -80px;
             margin-top: -10px;
             margin-bottom: -30px;
             @include flex (row);
@@ -265,6 +319,675 @@ $secondFont: venusRising;
                 background: transparent;
                 &:hover {
                     opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+// LOGIN
+#login {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/pict/massEffectLogin.jpg');
+    #btnCloseConnect {
+        top: 1%;
+        left: 98%;
+        border: none;
+        font-size: 1.6em;
+        position: relative;
+        color: $firstColor;
+        background: transparent;
+    }
+    .containLogIn {
+        top: 5%;
+        right: 35%;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: block;
+        max-height: 270px;
+        max-width: 490px;
+        position: relative;
+        form {
+            .identify {
+                font-size: 2.2em;
+                margin-left: 20px;
+                color: $firstColor;
+                text-align: center;
+                letter-spacing: 2px;
+                margin-bottom: -10px;
+                font-family: $firstFont;
+                text-shadow: 0px 1px 5px $secondColor;
+            }
+            input {
+                width: 60%;
+                margin: auto;
+                display: block;
+            }
+            .already {
+                margin-top: 9px;
+                font-size: 1.3em;
+                color: $firstColor;
+                text-align: center;
+                font-family: $secondFont;
+                text-shadow: 0px 0px 4px $secondColor;
+                .hrefSignUp {
+                    cursor: pointer;
+                    color: $firstColor;
+                    text-decoration: none;
+                    font-family: $secondFont;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+            #btnIdentify {
+                padding: 7px;
+                display: block;
+                cursor: pointer;
+                font-size: 1.0em;
+                margin: 8px auto;
+                color: $firstColor;
+                border-radius: 20px;
+                font-family: $firstFont;
+                border: 1px solid $firstColor;
+                background-color: transparent;
+                &:hover {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
+
+// REGISTER
+#register {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/pict/massEffectCitadel.jpg');
+    #btnCloseConnect {
+        top: 1%;
+        left: 98%;
+        border: none;
+        font-size: 1.6em;
+        position: relative;
+        color: $firstColor;
+        background: transparent;
+    }
+    .containRegister {
+        top: 32%;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        padding: 10px;
+        display: block;
+        max-width: 510px;
+        max-height: 270px;
+        position: relative;
+        form {
+            .register {
+                font-size: 2.2em;
+                text-align: center;
+                letter-spacing: 2px;
+                color: $firstColor;
+                margin-bottom: -10px;
+                font-family: $firstFont;
+                text-shadow: 0px 0px 4px $fiveColor;
+            }
+            .nomember {
+                margin-top: 15px;
+                font-size: 1.4em;
+                color: $firstColor;
+                text-align: center;
+                font-family: $secondFont;
+                text-shadow: 0px 0px 4px $fiveColor;
+                .hrefLogIn {
+                    cursor: pointer;
+                    color: $firstColor;
+                    text-decoration: none;
+                    font-family: $secondFont;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+            #btnRegister {
+                padding: 7px;
+                display: block;
+                cursor: pointer;
+                font-size: 1.0em;
+                margin: 8px auto;
+                color: $firstColor;
+                border-radius: 20px;
+                letter-spacing: 2px;
+                font-family: $firstFont;
+                border: 1px solid $firstColor;
+                background-color: transparent;
+                &:hover {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}
+
+// MEDIA QUERRY
+@media screen and (max-width: 1440px) {
+    #home {
+        .about {
+            .info {
+                left: 69%;
+            }
+        }
+        .characters {
+            .containCharacter {
+                .detailCharacter {
+                    .row {
+                        .col-lg-7 {
+                            left: 12%;
+                            max-width: 620px;
+                        }
+                    }
+                }
+            }
+        }
+        .contact {
+            .contactContain {
+                .form-area {
+                    margin-left: 40px;
+                    form {
+                        .form-group {
+                            textarea {
+                                margin-left: -10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #login {
+        background-image: url('/assets/pict/massEffectLogin2.jpg');
+        #btnCloseConnect {
+            left: 97%;
+        }
+        .containLogIn {
+            top: 30%;
+            right: 0%;
+        }
+    }
+    #register {
+        #btnCloseConnect {
+            left: 97%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #home {
+        .about {
+            background-image: url('/assets/pict/massEffectAbout4.jpg');
+            .info {
+                left: 50%;
+                .present {
+                    font-size: 1.2em;
+                }
+            }
+        }
+        .characters {
+            height: 565px;
+            .containCharacter {
+                .detailCharacter {
+                    max-width: 1200px;
+                    .row {
+                        .col-lg-7 {
+                            max-width: 450px;
+                        }
+                    }
+                }
+            }
+        }
+        .contact {
+            margin-bottom: 0px;
+            background-image: url('/assets/pict/massEffectContact2.jpg');
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #home {
+        .show {
+            .picsum-img-wrapper {
+                width: 1100px;
+                #pictWallpaper {
+                    margin-left: -140px;
+                    max-width: 1800px;
+                }
+            }
+            .listSupport {
+                top: 85%;
+                .row {
+                    height: 70px;
+                    overflow: auto;
+                    flex-wrap: wrap;
+                    .col-lg-4 {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        .about {
+            height: 360px;
+            .info {
+                top: 120%;
+                .present {
+                    font-size: 1.2em;
+                }
+                .sentence {
+                    margin-top: 18px;
+                    width: 700px;
+                    .what {
+                        font-size: 1.0em;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .characters {
+            height: 860px;
+            .listCharacters {
+                overflow: auto;
+                max-width: 750px;
+            }
+            .containCharacter {
+                .detailCharacter {
+                    .row {
+                        .col-lg-5 {
+                            .img-fluid {
+                                left: 5%;
+                            }
+                        }
+                        .col-lg-7 {
+                            left: 10%;
+                            max-width: 650px;
+                            .describe {
+                                height: 280px;
+                                margin: 20px auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contact {
+            .titleContact {
+                padding-top: 18px;
+            }
+            .contactContain {
+                margin-top: -15px;
+                .form-area {
+                    form {
+                        .alert {
+                            margin-left: 46px;
+                        }
+                        .form-group {
+                            .row {
+                                .col-lg-6 {
+                                    margin-left: -3px;
+                                    input {
+                                        max-width: 400px;
+                                    }
+                                }
+                            }
+                            textarea {
+                                margin-left: -4px;
+                            }
+                            .warning {
+                                margin-left: -40px;
+                                .alert {
+                                    width: 80%;
+                                }
+                            }
+                        }
+                        #btnSend {
+                            margin-left: 55px;
+                        }
+                    }
+                }
+                .footer {
+                    #btnConnect {
+                        margin-top: -10px;
+                    }
+                }
+            }
+        }
+    }
+    #login {
+        #btnCloseConnect {
+            left: 95%;
+        }
+    }
+    #register {
+        #btnCloseConnect {
+            left: 95%;
+        }
+        .containRegister {
+            top: 25%;
+            form {
+                input {
+                    margin: auto;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #home {
+        .show {
+            .picsum-img-wrapper {
+                width: 680px;
+                #pictWallpaper {
+                    margin-left: -100px;
+                    max-width: 1800px;
+                }
+            }
+        }
+        .about {
+            height: 505px;
+            .info {
+                top: 129%;
+                .present {
+                    font-size: 1.2em;
+                }
+                .sentence {
+                    margin-top: 18px;
+                    width: 380px;
+                    .what {
+                        font-size: 1.0em;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .characters {
+            height: 880px;
+            .listCharacters {
+                max-width: 400px;
+                overflow: auto;
+            }
+            .containCharacter {
+                .detailCharacter {
+                    .row {
+                        .col-lg-5 {
+                            .img-fluid {
+                                left: 0%;
+                                max-width: 600px;
+                            }
+                        }
+                        .col-lg-7 {
+                            left: 0%;
+                            .describe {
+                                height: 280px;
+                                margin: 30px auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contact {
+            .titleContact {
+                padding-top: 18px;
+            }
+            .contactContain {
+                margin-top: -15px;
+                .form-area {
+                    form {
+                        .alert {
+                            margin-left: 46px;
+                        }
+                        .form-group {
+                            .row {
+                                .col-lg-6 {
+                                    input {
+                                        width: 220%;
+                                        margin-left: -75px;
+                                        max-width: 400px;
+                                    }
+                                }
+                            }
+                            textarea {
+                                margin-top: -5px;
+                                margin-left: -59px;
+                                width: 190%;
+                            }
+                            .warning {
+                                margin-left: -160px;
+                                .alert {
+                                    width: 120%;
+                                }
+                            }
+                        }
+                        #btnSend {
+                            margin-left: -15px;
+                        }
+                    }
+                }
+            }
+            .footer {
+                    .copy {
+                        font-size: 1.1em;
+                        margin-left: 0px;
+                    }
+                    #btnConnect {
+                        margin-top: -38px;
+                    }
+                }
+        }
+    }
+    #login {
+        #btnCloseConnect {
+            left: 92%;
+        }
+        .containLogIn {
+            .alert {
+                margin: auto;
+                width: 70%;
+            }
+            form {
+                .identify {
+                    font-size: 1.8em;
+                }
+                .already {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+    #register {
+        #btnCloseConnect {
+            left: 92%;
+        }
+        .containRegister {
+            top: 20%;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #home {
+        .show {
+            .picsum-img-wrapper {
+                width: 620px;
+                #pictWallpaper {
+                    margin-left: -100px;
+                    max-width: 1800px;
+                }
+            }
+        }
+        .about {
+            height: 510px;
+        }
+        .contact {
+            .titleContact {
+                padding-top: 18px;
+            }
+            .contactContain {
+                margin-top: -15px;
+                .form-area {
+                    form {
+                        .alert {
+                            margin-left: 46px;
+                        }
+                        .form-group {
+                            .row {
+                                .col-lg-6 {
+                                    input {
+                                        width: 220%;
+                                        margin-left: -65px;
+                                        max-width: 400px;
+                                    }
+                                }
+                            }
+                            textarea {
+                                margin-top: -5px;
+                                margin-left: -54px;
+                                width: 190%;
+                            }
+                            .warning {
+                                margin-left: -160px;
+                                .alert {
+                                    width: 120%;
+                                }
+                            }
+                        }
+                        #btnSend {
+                            margin-left: -32px;
+                        }
+                    }
+                }
+            }
+            .footer {
+                .copy {
+                    font-size: 1.0em;
+                    margin-left: 0px;
+                }
+                #btnConnect {
+                    margin-top: -42px;
+                }
+            }
+        }
+    }
+    #login {
+        #btnCloseConnect {
+            left: 90%;
+        }
+        .containLogIn {
+            form {
+                .identify {
+                    font-size: 1.8em;
+                }
+                .already {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #home {
+        .show {
+            .picsum-img-wrapper {
+                width: 560px;
+                #pictWallpaper {
+                    margin-left: -100px;
+                    max-width: 1800px;
+                }
+            }
+        }
+        .about {
+            height: 710px;
+            .info {
+                top: 140%;
+                .present {
+                    font-size: 1.1em;
+                }
+                .sentence {
+                    width: 270px;
+                }
+            }
+        }
+        .contact {
+            .titleContact {
+                padding-top: 18px;
+            }
+            .contactContain {
+                margin-top: -15px;
+                .form-area {
+                    form {
+                        .alert {
+                            margin-left: 46px;
+                        }
+                        .form-group {
+                            .row {
+                                .col-lg-6 {
+                                    input {
+                                        width: 290%;
+                                        margin-left: -78px;
+                                        max-width: 400px;
+                                    }
+                                }
+                            }
+                            textarea {
+                                margin-top: -5px;
+                                margin-left: -82px;
+                                width: 290%;
+                            }
+                            .warning {
+                                margin-left: -160px;
+                                .alert {
+                                    width: 120%;
+                                }
+                            }
+                        }
+                        #btnSend {
+                            margin-left: -43px;
+                        }
+                    }
+                }
+            }
+            .footer {
+                .copy {
+                    font-size: 1.0em;
+                    margin-left: 0px;
+                }
+                #btnConnect {
+                    margin-top: -42px;
+                }
+            }
+        }
+    }
+    #register {
+        #btnCloseConnect {
+            left: 88%;
+        }
+        .containRegister {
+            form {
+                .register {
+                    font-size: 1.8em;
+                }
+                .nomember {
+                    font-size: 1.2em;
                 }
             }
         }

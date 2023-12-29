@@ -3,7 +3,7 @@
         <ngb-carousel>
             <ng-template ngbSlide *ngFor="let mass of massEffect">
                 <div class="picsum-img-wrapper">
-                    <img [src]="mass.wallpaper" class="img-fluid w-100" />
+                    <img [src]="mass.wallpaper" id="pictWallpaper" class="img-fluid w-100" />
                     <div class="navbar navbar-expand-lg">
                         <div class="navbar-brand">
                             <a [routerLink]="'/home'"><img src="/assets/pict/massEffectN7Logo.png" class="img-fluid w-100" alt="n7Logo" /></a>
@@ -35,6 +35,84 @@
             <div class="sentence">
                 <p class="what">Explorez les planètes, créer des liens avec d’autres personnages, faites vos choix et trouver un moyen de vaincre les Moisseneurs.</p>
                 <p class="what">Par les créateurs de Baldur’s Gate, voici une saga d'Action-RPG science-fiction la plus apprécié de tous.</p>
+            </div>
+        </div>
+    </div>
+    <div class="characters">
+        <div class="listCharacters">
+            <button type="button" id="btnCharacter" (click)="showCharacter('Liara')" class="img-fluid w-100">LIARA</button>
+            <button type="button" id="btnCharacter" (click)="showCharacter('Garrus')" class="img-fluid w-100">GARRUS</button>
+            <button type="button" id="btnCharacter" (click)="showCharacter('Tali')" class="img-fluid w-100">TALI</button>
+            <button type="button" id="btnCharacter" (click)="showCharacter('Wrex')" class="img-fluid w-100">WREX</button>
+            <button type="button" id="btnCharacter" (click)="showCharacter('Miranda')" class="img-fluid w-100">MIRANDA</button>
+            <button type="button" id="btnCharacter" (click)="showCharacter('Ashley')" class="img-fluid w-100">ASHLEY</button>
+        </div>
+        <div class="containCharacter" [ngSwitch]="characters">
+            <!-- LIARA -->
+            <div class="detailCharacter" *ngSwitchCase="'Liara'">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="/assets/pict/liaraT'Soni.jpeg" class="img-fluid w-100" alt="liara" />
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="describe">Le Dr Liara T'Soni est une chercheuse asari qui a passé les cinquante dernières années de sa vie à étudier la technologie et la culture prothéenne, se spécialisant dans l'extinction prothéenne. Elle est née à Thessia en 2077, ce qui fait qu'elle n'a « que » 106 ans, à peine une adulte en termes asari. Elle a déjà une grande connaissance des Prothéens et est une utilisatrice hautement qualifiée de biotiques. Elle constitue un intérêt romantique potentiel pour un Shepard, homme ou femme.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- GARRUS -->
+            <div class="detailCharacter" *ngSwitchCase="'Garrus'">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="/assets/pict/garrus.jpeg" class="img-fluid w-100" alt="garrus" />
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="describe">Garrus Vakarian est un turien, ancien membre de la division d'enquête du C-Sec. Comme la plupart des Turiens, Garrus reçut sa formation militaire à quinze ans, mais suivit plus tard les traces de son père pour devenir officier du C-Sec. Il était responsable de l'enquête sur Saren Arterius, le principal Spectre du Conseil, après que l'Alliance eut affirmé que Saren était devenu un voyou. Bien que Garrus ait été informé que l'enquête était terminée, il a décidé de défier l'ordre de l'Exécuteur et de poursuivre lui-même une autre piste. Finalement, Garrus tente de rejoindre l'équipe du commandant Shepard pour aider à vaincre Saren et les Geth.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- TALI -->
+            <div class="detailCharacter" *ngSwitchCase="'Tali'">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="/assets/pict/tali.jpeg" class="img-fluid w-100" alt="tali" />
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="describe">Tali'Zorah nar Rayya est une Quarienne et membre de l'escouade du Commandant Shepard. Elle est la fille de Rael'Zorah, membre du Conseil de l'Amirauté. Bien que jeune, Tali est un génie de la mécanique. En 2183, elle participe à son pèlerinage, le rite de passage pour prouver sa valeur et rapporter quelque chose de valeur à son peuple à bord de la flotte migrante. En 2185, après avoir accompli son pèlerinage, Tali se voit confier la direction d'une importante mission de recherche pour le Conseil de l'Amirauté.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- WREX -->
+            <div class="detailCharacter" *ngSwitchCase="'Wrex'">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="/assets/pict/wrex.jpeg" class="img-fluid w-100" alt="wrex" />
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="describe">Célèbre mercenaire krogan et chasseur de primes, Urdnot Wrex est également l'un des derniers maîtres de bataille krogans : des individus rares qui combinent de puissantes capacités biotiques avec la puissance de feu dévastatrice d'armes avancées. Krogan de longue date qui a vécu de nombreuses aventures, Wrex a entendu parler du commandant Shepard au cours de ses voyages et respecte le commandant en tant que compagnon de guerre.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- MIRANDA -->
+            <div class="detailCharacter" *ngSwitchCase="'Miranda'">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="/assets/pict/miranda.jpeg" class="img-fluid w-100" alt="miranda" />
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="describe">Miranda Lawson est une officier Cerberus humaine. Miranda a beaucoup voyagé et a de nombreux contacts, s'étendant de l'espace de la Citadelle et des systèmes Terminus, jusqu'aux hostiles Abysses Némées. Son vaste réseau de contacts peut s’expliquer par le fait que Miranda est une agente connue de Cerberus, qui a toujours des amis – ou du moins des amis d’amis – dans l’armée de l’Alliance. Elle a servi à plusieurs reprises de contact pour Jacob Taylor et membre de l'équipage du commandant Shepard. Miranda est un intérêt romantique potentiel pour un homme commandant Shepard.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ASHLEY -->
+            <div class="detailCharacter" *ngSwitchCase="'Ashley'">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="/assets/pict/ashley.jpeg" class="img-fluid w-100" alt="ashley" />
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="describe">Ashley Madeline Williams est un soldat humain qui a servi dans l'Alliance des Systèmes en tant que chef d'artillerie dans la 2e Division Frontière sur Eden Prime, et a ensuite été affecté à l'escouade du commandant Shepard après l'attaque des Geth sur Eden Prime. Elle est une partenaire amoureuse potentielle pour un homme Shepard.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -28,6 +28,12 @@ export class HomeComponent implements OnInit {
     },
   ];
 
+  characters: string = '';
+
+  showCharacter(friend: string) {
+    this.characters = friend;
+  }
+
   // CONTACT
   successmsg: any = 'Message envoyé avec succès';
   errormsg: any = "Echec de l'envoie du message";
